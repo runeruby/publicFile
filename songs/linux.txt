@@ -1,0 +1,20 @@
+apt install vim curl gnupg gnupg2 dirmngr tar binutils zsh nodejs  npm
+gpg2 --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+curl -L https://raw.githubusercontent.com/wayneeseguin/rvm/master/binscripts/rvm-installer | bash -s stable
+source /home/ubuntu/.rvm/scripts/rvm
+rvm requirements
+rvm install 2.6
+gem install rails bundler sqlite3
+
+#rails error
+#sudo add-apt-repository ppa:chris-lea/node.js
+#sudo apt-get -y update
+#sudo apt-get -y install nodejs
+
+#termux
+vi $PREFIX/etc/apt/sources.list
+http://mirrors.tuna.tsinghua.edu.cn/termux
+pkg install vim curl gnupg dirmngr tar binutils proot zsh   #termux-chroot
+vim $PREFIX/etc/motd
+sh -c "$(curl -fsSL https://github.com/Cabbagec/termux-ohmyzsh/raw/master/install.sh)"
+ln -s /data/data/com.termux/files/home/storage/shared/tencent/TIMfile_recv TIM
